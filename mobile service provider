@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+ int main() {
+    // named constants
+    const double PLAN_A_RATE = 39.99
+    const int PLAN_A_LIMIT = 2, PLAN_B_LIMIT +8;
+    const double ADD_COST = 8.00;
+
+    string name ;
+    char plan;
+    double gb;
+
+    cout << "Enter name, plan (A/B/C), and GB used:";
+    cin >> name >> plan >> gb;
+    else bill = PLAN_C_BASE;
+    cout << fixed << setprecision(2);
+    cout << "\nBill for " << name << " is $" << bill << endl;
+    if (plan == 'A' || plan == 'a') {
+        if (gb > PLAN_A_LIMIT) {
+            bill = PLAN_A_RATE + (gb - PLAN_A_LIMIT) * ADD_COST;
+        } else {
+            bill = PLAN_A_RATE;
+        }
+    } else if (plan == 'B' || plan == 'b') {
+        if (gb > PLAN_B_LIMIT) {
+            bill = PLAN_B_RATE + (gb - PLAN_B_LIMIT) * ADD_COST;
+        } else {
+            bill = PLAN_B_RATE;
+        }
+    } else if (plan == 'C' || plan == 'c') {
+        bill = PLAN_C_RATE;
+    } else {
+        cout << "Invalid plan selected." << endl;
+        return 1; // Exit with error
+ }
